@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My BTS Birthday 💜</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:'Trebuchet MS',sans-serif;
+ background:#fff7df;
+ color:#554367;
+ text-align:center;
+}
+header{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:25px;
+ background:linear-gradient(140deg,#fff0bd,#f8e2ed,#e9ddfa);
+}
+.paper{
+ background:#fffdf5;
+ border:2px dashed #d5b9a1;
+ border-radius:30px;
+ padding:35px 22px;
+ max-width:600px;
+ width:100%;
+ box-shadow:0 10px 30px #78618a25;
+}
+h1{font-size:42px;color:#75518f}
+h2{color:#795b91}
+p{line-height:1.7}
+button{
+ background:#9474b3;
+ color:white;
+ border:0;
+ padding:13px 22px;
+ border-radius:30px;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ margin:8px;
+}
+button:hover{transform:scale(1.04)}
+nav{
+ position:sticky;
+ top:0;
+ background:#fff9e9;
+ padding:12px 5px;
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:8px;
+ z-index:5;
+}
+nav a{
+ color:#72528b;
+ text-decoration:none;
+ font-weight:bold;
+ font-size:13px;
+}
+section{padding:55px 15px}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:15px;
+ max-width:850px;
+ margin:auto;
+}
+.card{
+ background:white;
+ border-radius:20px;
+ padding:20px 12px;
+ border:1px solid #eadbc5;
+}
+.member{font-size:38px}
+.ducks{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:10px;
+}
+.duck{
+ background:#fff;
+ color:#795b91;
+ border:2px solid #f0dca9;
+ font-size:27px;
+}
+.result{
+ background:white;
+ border-radius:18px;
+ padding:20px;
+ max-width:600px;
+ margin:20px auto;
+ min-height:60px;
+}
+.wheel{
+ width:230px;
+ height:230px;
+ border-radius:50%;
+ background:conic-gradient(
+ #f5cbdc 0 60deg,
+ #fff0b9 60deg 120deg,
+ #e5d8fa 120deg 180deg,
+ #d9eedc 180deg 240deg,
+ #f7dfc9 240deg 300deg,
+ #f5cbdc 300deg);
+ border:10px solid white;
+ margin:25px auto;
+ display:grid;
+ place-items:center;
+ font-size:55px;
+ transition:transform 3s ease-out;
+}
+.letter{
+ background:#fff;
+ max-width:650px;
+ margin:auto;
+ padding:25px;
+ border-radius:25px;
+ line-height:1.9;
+}
+footer{
+ background:#e9ddf4;
+ padding:30px;
+}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<header id="welcome">
+ <div class="paper">
+  <div style="font-size:55px">💜 🐰 💜</div>
+  <p>WELCOME TO YOUR SPECIAL DAY</p>
+  <h1>HAPPY BIRTHDAY, ARMY!</h1>
+  <p>Seven boys, seven surprises and one beautiful birthday!</p>
+  <button onclick="start()">OPEN YOUR SURPRISE ✨</button>
+  <p>OT7 FOREVER ♡</p>
+ </div>
+</header>
+
+<nav id="nav" class="hidden">
+ <a href="#members">OT7</a>
+ <a href="#ducks">DUCKS</a>
+ <a href="#gifts">GIFTS</a>
+ <a href="#cake">CAKE</a>
+ <a href="#jungkook">JUNGKOOK 🐰</a>
+</nav>
+
+<main id="main" class="hidden">
+
+<section id="members">
+ <h2>YOUR BIRTHDAY GUESTS 💜</h2>
+ <p>Seven stars, one family.</p>
+
+ <div class="grid">
+  <div class="card"><div class="member">🐨</div><h3>RM</h3><p>Keep learning and growing!</p></div>
+  <div class="card"><div class="member">🐹</div><h3>JIN</h3><p>Keep laughing and shining!</p></div>
+  <div class="card"><div class="member">🐱</div><h3>SUGA</h3><p>Find peace and happiness!</p></div>
+  <div class="card"><div class="member">🐿️</div><h3>J-HOPE</h3><p>Never lose your sunshine!</p></div>
+  <div class="card"><div class="member">🐥</div><h3>JIMIN</h3><p>Stay kind and beautiful inside!</p></div>
+  <div class="card"><div class="member">🐻</div><h3>V</h3><p>Keep creating beautiful things!</p></div>
+  <div class="card"><div class="member">🐰</div><h3>JUNGKOOK</h3><p>Keep chasing golden dreams!</p></div>
+ </div>
+</section>
+
+<section id="ducks">
+ <h2>CHOOSE YOUR BTS DUCK 🐤</h2>
+ <p>Which member's duck will you choose?</p>
+
+ <div class="ducks">
+  <button class="duck" onclick="duck('RM','May your year be full of discoveries! 🐨')">🐨 RM</button>
+  <button class="duck" onclick="duck('Jin','May laughter follow you everywhere! 🐹')">🐹 Jin</button>
+  <button class="duck" onclick="duck('SUGA','May you find peace and strength! 🐱')">🐱 SUGA</button>
+  <button class="duck" onclick="duck('J-Hope','May sunshine find you every day! 🐿️')">🐿️ J-Hope</button>
+  <button class="duck" onclick="duck('Jimin','May kindness always surround you! 🐥')">🐥 Jimin</button>
+  <button class="duck" onclick="duck('V','May creativity fill your life! 🐻')">🐻 V</button>
+  <button class="duck" onclick="duck('Jungkook','May golden opportunities find you! 🐰')">🐰 JK</button>
+ </div>
+
+ <div class="result" id="duckResult">
+ Your surprise will appear here 💌
+ </div>
+</section>
+
+<section id="gifts">
+ <h2>SPIN YOUR BIRTHDAY GIFT! 🎁</h2>
+
+ <div class="wheel" id="wheel">🎀</div>
+
+ <button onclick="spin()">SPIN THE WHEEL!</button>
+
+ <div class="result" id="giftResult">
+ Your mystery gift is waiting...
+ </div>
+</section>
+
+<section id="cake">
+ <h2>MAKE A BIRTHDAY WISH 🎂</h2>
+ <div style="font-size:100px;cursor:pointer" onclick="wish()">🎂</div>
+ <p>Tap your cake!</p>
+ <div class="result" id="wishResult">
+ Your birthday wish is waiting ✨
+ </div>
+</section>
+
+<section id="jungkook">
+ <h2>ONE SPECIAL SURPRISE 🐰</h2>
+
+ <div class="letter">
+  <div style="font-size:75px">🐰💜</div>
+  <h2>DEAR BIRTHDAY GIRL</h2>
+
+  <p>
+  Hey! Happy birthday! I hope your day is filled
+  with laughter, lovely memories and everything
+  that makes you happy.
+  </p>
+
+  <p>
+  Keep chasing your dreams, keep believing in
+  yourself and never forget to take care of yourself.
+  </p>
+
+  <p>
+  May your future be golden and your heart
+  always find reasons to smile.
+  </p>
+
+  <h2>FIGHTING! 💜</h2>
+  <p>— Your imaginary Jungkook birthday message 🐰</p>
+ </div>
+</section>
+
+</main>
+
+<footer id="footer" class="hidden">
+ <h2>HAPPY BIRTHDAY!! 💜</h2>
+ BOR AHAE FOREVER · OT7 FOREVER
+ <p>May Allah bless your new year with happiness,
+ health, success and beautiful memories. Ameen.</p>
+</footer>
+
+<script>
+function start(){
+ document.getElementById('nav').classList.remove('hidden');
+ document.getElementById('main').classList.remove('hidden');
+ document.getElementById('footer').classList.remove('hidden');
+ document.getElementById('members').scrollIntoView({behavior:'smooth'});
+}
+
+function duck(name,message){
+ document.getElementById('duckResult').innerHTML=
+ '<h3>'+name+' picked you! 💜</h3>'+message;
+}
+
+const gifts=[
+ 'PURPLE FLOWERS 🌷',
+ 'A LOVE LETTER 💌',
+ 'OT7 MEMORIES 📸',
+ 'A MUSIC PLAYLIST 🎶',
+ 'GOLDEN BUNNY 🐰',
+ 'A DREAM TRIP ✈️'
+];
+
+let spinning=false;
+
+function spin(){
+ if(spinning)return;
+ spinning=true;
+
+ let n=Math.floor(Math.random()*gifts.length);
+ let wheel=document.getElementById('wheel');
+
+ wheel.style.transform='rotate('+(1440+n*60)+'deg)';
+
+ setTimeout(()=>{
+  document.getElementById('giftResult').innerHTML=
+  '<h3>YOUR GIFT IS...</h3>'+gifts[n];
+  spinning=false;
+ },3000);
+}
+
+function wish(){
+ document.getElementById('wishResult').innerHTML=
+ '✨ Wish made! May Allah bless your year with peace, success and happiness. Ameen! 💜';
+}
+</script>
+
+</body>
+</html>
